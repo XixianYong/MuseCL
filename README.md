@@ -1,6 +1,6 @@
-# MuseCL - IJCAI2024 (AI for Social Good)
+# MuseCL - IJCAI2024 (AI and Social Good)
 
-The repo is the official implementation for our IJCAI2024 paper in AI for Good Track: **MuseCL: Predicting Urban Socioeconomic Indicators via Multi-Semantic Contrastive Learning**.
+The repo is the official implementation for our IJCAI2024 paper in AI and Social Good Track: **MuseCL: Predicting Urban Socioeconomic Indicators via Multi-Semantic Contrastive Learning**.
 
 ## Overview
 
