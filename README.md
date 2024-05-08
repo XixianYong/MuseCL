@@ -12,7 +12,7 @@ To begin, we partition the visual semantic learning module into remote sensing i
 
 ## Details of Dataset
 
-### Region division
+#### Region division
 
 Before representing regions, partitioning the smallest units is necessary. Common methods include irregular road networks, square grids, and hexagonal grids.
 
@@ -22,7 +22,7 @@ To combine road network and square division strengths, hexagonal division emerge
 
 ![](pic/region_split.jpg)
 
-### Urban multi-modal datas
+#### Urban multi-modal datas
 
 In line with the framework, data collection entails gathering street view images, remote sensing images, POI data, and population mobility data.
 
@@ -38,7 +38,7 @@ Following data collection and preprocessing, the datasets for the three cities a
 
 <img src="pic/dataset_statistics.jpg" style="zoom:70%;" />
 
-### Socio-economic indicators
+#### Socio-economic indicators
 
 To provide a comprehensive showcase of our model's predictive capabilities across diverse urban attributes, an array of region characteristics has been chosen for experimentation in this study. The data sources and their links are provided as follows.
 
@@ -48,11 +48,30 @@ To provide a comprehensive showcase of our model's predictive capabilities acros
 - **Population Mobility.** Beijing: Microsoft Research, https://www.microsoft.com/en-us/research/. Shanghai: HKUST, https://cse.hkust.edu.hk/scrg/. New York: Kaggle, https://www.kaggle.com/datasets.
 - **Crime Data.** NewYork: NYC Open Data, https://opendata.cityofnewyork.us/.
 
-## Experiment Details
+## Details of Experiment
 
 Algorithm below summarizes the training process of our proposed MuseCL framework for fine-grained urban region profiling.
 
 <img src="pic/algorithm.jpg" style="zoom:50%;" />
+
+## Usage
+
+#### Environment
+
+- Python >= 3.9
+- torch == 2.2.1 + cu121
+
+#### Dependencies
+
+1. Install Pytorch with the correct CUDA version.
+2. Use the `pip install -r requirements.txt` command to install all of the Python modules and packages used in this project.
+
+#### Model Training and Predicting
+
+1. Download the data from the url above into `\prediction-tasks\data`, and use the code in`\pre-processing` to pre-process the raw data.
+2. Use `\street-view\sv_train.py` and `\remote-view\rv_train.py` to obtain the feature representations of the street view images and remote sensing images in each area, respectively.
+3. Use `\attentive-fusion\fusion_module.py` to obtain the region representation vector after fusion multi-semantics, and save them into `\prediction-tasks\emb`.
+4. Use `\prediction-tasks\mlp_pytorch` to predict each socio-economic indicator.
 
 ## Results
 
