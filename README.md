@@ -38,6 +38,8 @@ Following data collection and preprocessing, the datasets for the three cities a
 
 <img src="pic/dataset_statistics.jpg" style="zoom:70%;" />
 
+Here we release the data of New York: https://drive.google.com/drive/folders/1Draisytj63id9lf_7xaLeQnPVZbTJue1?usp=drive_link
+
 #### Socio-economic indicators
 
 To provide a comprehensive showcase of our model's predictive capabilities across diverse urban attributes, an array of region characteristics has been chosen for experimentation in this study. The data sources and their links are provided as follows.
